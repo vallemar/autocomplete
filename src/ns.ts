@@ -49,6 +49,11 @@ const noHmrOption: Fig.Option = {
   description: "Disables Hot Module Replacement (HMR)",
 };
 
+const watchNodeModules: Fig.Option = {
+  name: "--env.watchNodeModules",
+  description: "Enable watching node_modules for changes.",
+};
+
 const frameworkPathOption: Fig.Option = {
   name: "--framework-path",
   description:
@@ -198,6 +203,7 @@ const platformEnvOptions: Fig.Option[] = [
 const platformGeneralOptions: Fig.Option[] = [
   ...platformEnvOptions,
   noHmrOption,
+  watchNodeModules,
   forceOption,
   deviceOption,
   cleanOption,
